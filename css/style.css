@@ -1,0 +1,230 @@
+html body {
+	background: url("images/bg_main.png") repeat-x;
+	margin: 0px auto;
+	padding: 20px 0px 10px 0px;
+	text-align: center;
+}
+
+html body, td, th, textarea, input, select, li, div {
+	color: #343b3c;
+	font: 8pt/10pt Verdana, Arial, Helvetica, sans-serif;
+}
+
+#container {
+	width: 800px;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+#containerbox {
+	width: 780px;
+	background-color: #dde3e6;
+	border: 10px solid #fff;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	text-align: left;
+}
+
+#header {
+	width: 760px;
+	margin: 10px;
+}
+
+#mainheader {
+	background: url("images/logo.gif") no-repeat;
+	width: 560px;
+	height: 50px;
+	float: left;
+}
+
+#searchbar {
+	float: right;
+	text-align: right;
+}
+
+#topnav {
+	text-align: right;
+	margin: 0px 10px 5px 10px;
+	width: 758px;
+	height: 15px;
+}
+
+#mainwrapper {
+	width: 780px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#sidebar {
+	width: 163px;
+	/* margin: 0px 5px 10px 10px; */
+	padding: 0px 5px 10px 10px;
+	margin: 0px;
+	vertical-align: top;
+	text-align: left;
+}
+
+#sidebar ul, #sidebar ul li ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#sidebar ul li {
+	background-color: #fff;
+	border: 1px solid #adb3b6;
+	margin-bottom: 10px;
+	width: 150px;
+}
+
+#sidebar ul li h3 {
+	margin: 5px;
+	font: 9pt/11pt Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #44616B;
+}
+
+#sidebar ul li h3.sideheader {
+	/* background-color: #dde3e6; */
+	background-color: #389A2D;
+	color: #fff;
+	margin: 5px 5px 2px 5px;
+	padding: 5px;
+}
+
+#sidebar ul li ul.sidenav {
+	list-style: none;
+	padding: 0px;
+	margin: 0px 5px 5px 5px;
+	border: 1px solid #adb3b6;
+}
+
+#sidebar ul li ul.sidenav li {
+	border-top: 0px none;
+	border-left: 0px none;
+	border-right: 0px none;
+	border-bottom: 1px dashed #c0c7c8;
+	margin-bottom: 0px;
+	width: 138px;
+}
+
+a {
+	color: #0000af;
+	text-decoration: none;
+}
+
+ul.sidenav li a {
+	color: #5F5D5C;
+	display: block;
+	padding: 5px;
+	background-color: #F8FBEE;
+	text-decoration: none;
+}
+
+ul.sidenav li a:hover, ul.sidenav li.selected a {
+	background-color: #36992B;
+	color: #fff;
+	text-decoration: none;
+}
+
+#sidebar ul li div.sidecontent {
+	/* background-color: #dde3e6; */
+	background-color: #389A2D;
+	color: #fff;
+	margin: 2px 5px 5px 5px;
+	padding: 5px;
+}
+
+div.sidecontent form {
+	margin: 0px;
+	padding: 0px;
+}
+
+input {
+	width: 125px;
+}
+
+.cleared {
+	clear: both;
+}
+
+#contentwrapper {
+	padding: 0px 10px 10px 5px;
+	height: auto;
+	width: 100%;
+	/* margin: 0px 10px 10px 5px; */
+	vertical-align: top;
+	text-align: left;
+}
+
+#content {
+	padding: 10px;
+	border: 1px solid #adb3b6;
+	/* width: 756px; */
+	width: auto;
+	height: auto;
+	background-color: #fff;
+}
+
+#footer {
+	width: 800px;
+	padding: 5px 0px 0px 0px;
+}
+
+table {
+	display: table;
+}
+
+tr {
+	display: table-row;
+}
+
+th, td {
+	display: table-cell;
+}
+
+.form_perhitungan tr {
+	background-color: #f2f2f2;
+}
+
+.form_perhitungan tr th {
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left;
+}
+
+.form_perhitungan tr th.tableheader {
+	background-color: #954;
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.label_cols {
+	width: 300px;
+}
+
+.label_cols sup {
+	color: #a00;
+}
+
+.value_cols {
+	width: 150px;
+	text-align: center;
+}
+
+.input_angka {
+	width: 125px;
+	text-align: right;
+}
+
+#footnote ol {
+	padding-left: 25px;
+}
+
+#footnote ul {
+	padding-left: 15px;
+	margin: 0px;
+}
