@@ -1,55 +1,6 @@
 (function($) {
 
-$.jsMadani = {
-
-	getData : function (div, pageURL) {
-		//$(div).slideUp("slow");
-		
-		$.ajax({
-			type: "GET",
-			url: pageURL,
-			beforeSend: function() {
-				$(div).html('Loading.. Mohon tunggu sebentar, atau silahkan refresh halaman jika terlalu lama.');
-			},
-			success: function(html) {
-				$(div).html(html);
-			}
-		});
-		
-		//$(div).show("fast");
-	},
-	
-	postData : function (div, pageURL, params) {
-		//$(div).slideUp("slow");
-		
-		$.ajax({
-			type: "POST",
-			url: pageURL,
-			data: params,
-			beforeSend: function() {
-				$(div).html('Loading.. Mohon tunggu sebentar, atau silahkan refresh halaman jika terlalu lama.');
-			},
-			success: function(html) {
-				$(div).html(html);
-			}
-		});
-		
-		//$(div).show("fast");
-	},
-	
-	createQuery : function (form) {
-		var elements = document.getElementById(form);
-		var pairs = new Array();
-
-		for (var i = 0; i < elements.length; i++) {
-			if ((name = elements[i].name)) {
-				value = elements[i].value;
-				pairs.push(name + "=" + value);
-			}
-		}
-
-		return pairs.join("&");
-	},
+$.elsyifaJS = {
 	
 	toIndonesianNumber : function (num, decIfZero) {
 		num = parseFloat(num);

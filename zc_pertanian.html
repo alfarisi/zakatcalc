@@ -68,21 +68,44 @@
 <th id="contentwrapper">
 <div id="content">
 <!-- content -->
-<h2>ZakatCalc</h2>
-As-salamu 'alaikum wa rahmatuLlahi wa barakatuh
+
+<h2>Zakat Hasil Pertanian dan Buah-buahan</h2>
+Nishab untuk jenis zakat ini adalah sebesar <strong>750 kg</strong>. Dikeluarkan <strong>saat panen</strong> sebesar <strong>5% jika irigasinya menggunakan biaya/beban</strong>, atau <strong>10% jika diairi dengan air hujan/sungai (tanpa biaya)</strong>.
 <br /><br />
-Keterangan dan panduan singkat tentang ZakatCalc.
-<ol>
-<li>ZakatCalc merupakan aplikasi penghitung zakat mal (harta) berbasis web. Sepenuhnya hanya menggunakan HTML, CSS dan JavaScript/AJAX. Sehingga, tidak ada dependensi khusus terhadap sistem operasi tertentu.</li>
-<li>ZakatCalc bersifat gratis dan opensource.</li>
-<li>Aplikasi ini sudah di-ujicoba dan berjalan baik pada browser seperti Firefox (v8.0).</li>
-<li>Semua penulisan angka menggunakan format Indonesia. Misalnya satu juta, boleh ditulis dengan 1.000.000 atau 1000000 atau 1.000.000,00 atau 1000000,00.</li>
-<li>Pada versi selanjutnya, insyaaLlah akan semakin disempurnakan, sehingga dapat mencakup semua jenis zakat mal (harta). Termasuk juga nantinya akan diberikan panduan yang lebih lengkap tentang zakat.</li>
-<li>Silahkan mengunjungi <a href="http://islam.indokreatif.net/zakatcalc/">http://islam.indokreatif.net/zakatcalc/</a> untuk men-download update atau rilis terbaru dari ZakatCalc.</li>
-</ol>
-Terima kasih,<br />
-Was-salamu 'alaikum wa rahmatuLlahi wa barakatuh<br />
-Indokreatif Teknologi
+<table class="form_perhitungan">
+<tr>
+	<th colspan="2" class="tableheader"><strong>Biji-bijian dan Buah-buahan</strong></th>
+</tr>
+<tr>
+	<th class="label_cols">Hasil Panen</th>
+	<th class="value_cols"><input type="text" id="panen" class="input_angka" style="width:60px" onkeyup="validasiAngka(this); zc_pertanian();" /> kg</th>
+</tr>
+<tr>
+	<th class="label_cols">Jenis Pengairan</th>
+	<th class="value_cols">
+	<select id="persen_zakat" onchange="zc_pertanian();">
+		<option value="0.1">tanpa biaya</option>
+		<option value="0.05">dengan biaya</option>
+	</select>
+	</th>
+</tr>
+
+<tr>
+	<th colspan="2" class="tableheader"><strong>Zakat</strong></th>
+</tr>
+<tr>
+	<th class="label_cols"><strong>.:. Zakat</strong></th>
+	<th class="value_cols"><input type="text" id="zakat" class="input_angka" style="width:60px" disabled="disabled" /> kg</th>
+</tr>
+
+<tr>
+	<th colspan="2" class="tableheader" id="keterangan">&nbsp;</th>
+</tr>
+</table>
+<br />
+<div id="footnote">
+</div>
+
 <!-- end of content -->
 
 </div>
