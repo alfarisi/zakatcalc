@@ -1,6 +1,40 @@
 (function($) {
 
 $.elsyifaJS = {
+	getData : function (div, pageURL) {
+		//$(div).slideUp("slow");
+		
+		$.ajax({
+			type: "GET",
+			url: pageURL,
+			beforeSend: function() {
+				$(div).html('Loading.. Mohon tunggu sebentar, atau silahkan refresh halaman jika terlalu lama.');
+			},
+			success: function(html) {
+				$(div).html(html);
+			}
+		});
+		
+		//$(div).show("fast");
+	},
+	
+	postData : function (div, pageURL, params) {
+		//$(div).slideUp("slow");
+		
+		$.ajax({
+			type: "POST",
+			url: pageURL,
+			data: params,
+			beforeSend: function() {
+				$(div).html('Loading.. Mohon tunggu sebentar, atau silahkan refresh halaman jika terlalu lama.');
+			},
+			success: function(html) {
+				$(div).html(html);
+			}
+		});
+		
+		//$(div).show("fast");
+	},
 	
 	toIndonesianNumber : function (num, decIfZero) {
 		num = parseFloat(num);

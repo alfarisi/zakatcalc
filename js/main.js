@@ -7,6 +7,11 @@ Website :
 - http://alfarisi.web.id
 */
 
+show_content = function (modul) {
+	url = './mod/' + modul + '.html';
+	$.elsyifaJS.postData('#content', url, '');
+}
+
 validasiAngka = function (field) {
 	var Char;
 	var sudahkoma = false;
