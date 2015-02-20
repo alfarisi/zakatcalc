@@ -172,13 +172,15 @@ zc_ternak_kambing = function () {
 		$('#zakat_kambing').val('0');
 		$('#keterangan_kambing').html('Kambing BELUM mencapai nishab. Tidak dikenakan kewajiban zakat.');
 		return 1;
-	} else if (kambing < 121) {
+	} else if (kambing <= 120) {
 		$('#zakat_kambing').val('1');
-	} else if (kambing < 201) {
+	} else if (kambing <= 200) {
 		$('#zakat_kambing').val('2');
+	} else if (kambing > 200 && kambing < 400) {
+		$('#zakat_kambing').val('3');
 	} else {
 		zakat = kambing / 100;
-		zakat = Math.ceil(zakat);
+		zakat = Math.floor(zakat);
 		$('#zakat_kambing').val(zakat);
 	}
 	
