@@ -63,6 +63,31 @@ nisab_beras = function () {
 }
 
 /* zakat mal (umum) */
+zc_mal_nisab = function () {
+	opsi = $('#opsi_nisab').val();
+	
+	if (opsi == 'emas') {
+		$("#harga_emas").prop('disabled', false);
+		$("#harga_perak").prop('disabled', true);
+		
+		harga = $('#harga_emas').val();
+		harga = $.elsyifaJS.indonesianNumberToFloat(harga);
+		nisab = 85 * harga;
+	} else {
+		$("#harga_emas").prop('disabled', true);
+		$("#harga_perak").prop('disabled', false);
+		
+		harga = $('#harga_perak').val();
+		harga = $.elsyifaJS.indonesianNumberToFloat(harga);
+		nisab = 595 * harga;
+	}
+	
+	$('#nisab_float').val(nisab);
+	
+	nisab = $.elsyifaJS.toIndonesianNumber(nisab);
+	$('#nisab').val(nisab);
+}
+
 zc_mal_total_harta = function () {
 	uang_tabungan = $('#uang_tabungan').val();
 	saham = $('#saham').val();
@@ -95,7 +120,7 @@ zc_mal_total_kewajiban = function () {
 }
 
 zc_mal_hitung = function () {
-	nisab = $('#nisab_emas_float').val();
+	nisab = $('#nisab_float').val();
 	harta = $('#total_harta_float').val();
 	kewajiban = $('#total_kewajiban_float').val();
 	

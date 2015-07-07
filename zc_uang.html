@@ -70,19 +70,32 @@
 <!-- content -->
 
 <h2>Zakat Uang dan Surat Berharga Lainnya</h2>
-Untuk menghitung zakat harta yang telah tersimpan selama <strong>1 tahun hijriyah</strong>. Metode perhitungannya sama dengan zakat emas. Yaitu, dengan nisab senilai <strong>85 gram emas</strong>. Sedangkan zakatnya adalah sebesar <strong>2,5%</strong>.
+Untuk menghitung zakat harta yang telah tersimpan selama <strong>1 tahun hijriyah</strong>. Metode perhitungannya sama dengan zakat emas atau perak. Yaitu, dengan nisab senilai <strong>85 gram emas atau 595 gram perak</strong>. Sedangkan zakatnya adalah sebesar <strong>2,5%</strong>.
 <br /><br />
 <table class="form_perhitungan">
 <tr>
 	<th colspan="2" class="tableheader"><strong>Nishab</strong></th>
 </tr>
 <tr>
+	<th class="label_cols">Nishab yang digunakan</th>
+	<th class="value_cols">
+	<select name="opsi_nisab" id="opsi_nisab" onchange="zc_mal_nisab(); zc_mal_hitung();">
+		<option value="emas" selected="selected">Emas</option>
+		<option value="perak">Perak</option>
+	</select>
+	</th>
+</tr>
+<tr>
 	<th class="label_cols">Harga 1 gram emas</th>
-	<th class="value_cols">Rp <input type="text" id="harga_emas" class="input_angka" onkeyup="validasiAngka(this); nisab_emas(); zc_mal_hitung();" onblur="validasi_numstring(this);" value="470.000,00" /></th>
+	<th class="value_cols">Rp <input type="text" id="harga_emas" class="input_angka" onkeyup="validasiAngka(this); zc_mal_nisab(); zc_mal_hitung();" onblur="validasi_numstring(this);" value="511.000,00" /></th>
+</tr>
+<tr>
+	<th class="label_cols">Harga 1 gram perak</th>
+	<th class="value_cols">Rp <input type="text" id="harga_perak" class="input_angka" onkeyup="validasiAngka(this); zc_mal_nisab(); zc_mal_hitung();" onblur="validasi_numstring(this);" value="11.000,00" disabled="disabled" /></th>
 </tr>
 <tr>
 	<th class="label_cols"><strong>.:. Nishab</strong></th>
-	<th class="value_cols">Rp <input type="text" id="nisab_emas" class="input_angka" disabled="disabled" value="39.950.000,00" /> <input type="hidden" id="nisab_emas_float" value="39950000.00" /></th>
+	<th class="value_cols">Rp <input type="text" id="nisab" class="input_angka" disabled="disabled" value="43.435.000,00" /> <input type="hidden" id="nisab_float" value="43435000.00" /></th>
 </tr>
 
 <tr>
